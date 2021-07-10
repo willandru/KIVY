@@ -1,24 +1,93 @@
-BoxLayoutExample:
+GridLayoutExample:
+
+<GridLayoutExample>:
+
+    #rows
+    #cols
+
+    cols:4
+    rows:2
+    Button:
+        text:"A"
+        size_hint:.5,1
+    Button:
+        text:"B"
+    Button:
+        text:"C"
+    Button:
+        text:"D"
+    Button:
+        text:"E"
+        size_hint:.3,.7
+    Button:
+        text:"F"
+        size_hint:None,.7
+        width:"100dp"
+    Button:
+        text:"G"
+        size_hint:.3,.7
+
+
+
+<AnchorLayoutExample>:
+    #right, left, center 
+    #anchor_x: "left"
+
+    #bottom, top, center
+    anchor_y:"top"
+
+    BoxLayout:
+        size_hint: .2, .3
+        Button:
+            text:"Bot A"
+            #size_hint: .2, .3
+
+        Button:
+            text:"Bot BBB"
+            #size_hint: .1, .1
+
+
+
+
 <BoxLayoutExample>:
-    orientation: "vertical"
+    orientation: "horizontal"
     Button:
         text: "A"
         size_hint: .8, .5
     Button:
         text: "B"
-        size_hint: 1, 2
-    Button:
-        text: "C"
-        size_hint: None, None
-        size: "100dp", "100dp"
+        size_hint: 1, 1
+    BoxLayout:
+        orientation: "vertical"
+        spacing: "20dp"
+        Button:
+            text: "Cs"
+            size_hint: None, None
+            size: "100dp", "100dp"
+        Button:
+            pos_hint: {"top":.5}
+            pos_hint: {"right":.5}
+            size_hint: None, None
+            size: "100dp", "100dp"
+            text: "Cd"
+            
+    
     Button:
         text: "D"
-        size_hint: 1, None
+        size_hint: None, None
         #size: "100dp", "100dp"
-        #width: "100dp"
-        height: "60dp"
+        width: "90dp"
+        #height: "60dp"
+        #x, center_x, right   < Controls the x-direction of the buttons
+        #y, center_y, top
+        pos_hint: {"x":.5}
+        pos_hint: {"center_y":.5}
 
     
+
+
+
+
 <MainWidget>:
     Button:
         text: "Hello"
