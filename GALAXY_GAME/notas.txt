@@ -9,3 +9,16 @@ class BoxLayoutExample(BoxLayout):
         self.add_widget(b1)
         self.add_widget(b2)
         self.add_widget(b3)
+
+----------------------------
+
+<StackLayoutExample>:
+    Button:
+        text:"A"
+        size_hint: .2, .2
+    Button:
+        text:"B"
+        size_hint: .2, .2
+    Button:
+        text:"C"
+        size_hint: .2, .2
